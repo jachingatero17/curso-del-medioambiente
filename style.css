@@ -1,0 +1,181 @@
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        180deg,
+        #d8f3dc 0%,
+        #b7e4c7 50%,
+        #95d5b2 100%
+    );
+
+    min-height:100vh;
+    color:#1b4332;
+}
+
+/* ESCUDO DEL COLEGIO */
+.escudo-principal{
+    width:140px;
+    display:block;
+    margin:0 auto 20px auto;
+}
+
+/* SIMBOLO DE RECICLAJE */
+.reciclaje{
+    position:fixed;
+    right:20px;
+    top:20px;
+    font-size:70px;
+}
+
+/* ENCABEZADO */
+header{
+    text-align:center;
+    padding:40px 20px;
+}
+
+header h1{
+    color:#1b4332;
+    background:white;
+    display:inline-block;
+    padding:20px 30px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+
+header h2{
+    margin-top:20px;
+    color:#2d6a4f;
+}
+
+header p{
+    max-width:800px;
+    margin:20px auto;
+    font-size:18px;
+}
+
+/* CONTENIDO PRINCIPAL */
+main{
+    width:85%;
+    max-width:1000px;
+    margin:auto;
+}
+
+/* TARJETAS */
+section{
+    background:white;
+    margin:25px 0;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.12);
+}
+
+section h2{
+    color:#2d6a4f;
+}
+
+/* INPUT DEL NOMBRE */
+input[type="text"]{
+    width:90%;
+    max-width:400px;
+    padding:10px;
+    border:2px solid #95d5b2;
+    border-radius:10px;
+    font-size:16px;
+}
+
+/* OPCIONES DEL QUIZ */
+input[type="radio"]{
+    margin-top:10px;
+}
+
+label{
+    font-size:16px;
+}
+
+/* BOTONES */
+button{
+    background:#2d6a4f;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+    margin-top:20px;
+}
+
+button:hover{
+    background:#1b4332;
+}
+
+/* RESULTADO */
+#resultado{
+    margin-top:20px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+/* CERTIFICADO */
+#certificado{
+    text-align:center;
+    border:5px solid #2d6a4f;
+}
+
+.escudo-certificado{
+    width:120px;
+    margin-bottom:20px;
+}
+
+#nombreCertificado{
+    color:#1b4332;
+    font-size:28px;
+}
+
+/* LINEA DIVISORIA */
+hr{
+    border:none;
+    height:2px;
+    background:#d8f3dc;
+    margin:25px 0;
+}
+/* PREGUNTAS */
+.pregunta {
+    margin-bottom: 10px;
+}
+
+.pregunta label {
+    display: block;
+    margin: 6px 0 2px 4px;
+    cursor: pointer;
+}
+
+.pregunta input[type="radio"] {
+    margin-right: 8px;
+    accent-color: #2d6a4f;
+}
+
+/* RESULTADO */
+#resultado {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 10px;
+    background: #f0fdf4;
+}
+
+/* IMPRIMIR CERTIFICADO */
+@media print {
+    body * { visibility: hidden; }
+    #certificado, #certificado * { visibility: visible; }
+    #certificado {
+        position: absolute;
+        left: 0; top: 0;
+        width: 100%;
+        border: 8px solid #2d6a4f !important;
+        display: block !important;
+    }
+    #descargarPDF { display: none; }
+    .reciclaje { display: none; }
+}
